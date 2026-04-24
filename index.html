@@ -1,772 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MAGNATINE LLC – Advanced Manufacturing Engineering Consulting. 10+ years of expertise in mechanical design, automation, tooling, and process optimization for aerospace, automotive, and industrial clients." />
-  <meta name="keywords" content="manufacturing engineering, consulting, aerospace, automotive, mechanical design, automation, tooling, lean manufacturing, Houston TX" />
-  <title>MAGNATINE LLC | Manufacturing Engineering Consulting</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAGNATINE LLC</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #0b0b0b;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(0,0,0,0.8);
+  position: sticky;
+  top: 0;
+}
+
+nav img {
+  height: 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(to right, #000, #111);
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #ccc;
+}
+
+/* SECTION */
+section {
+  padding: 80px 50px;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 40px;
+  border-left: 4px solid #007bff;
+  padding-left: 10px;
+}
+
+/* PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+/* SERVICES */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+.service-box {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  background: #000;
+  margin-top: 50px;
+  color: #aaa;
+}
+
+footer img {
+  height: 35px;
+  margin-bottom: 10px;
+}
+</style>
 </head>
+
 <body>
 
-  <!-- ========== NAV ========== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo" data-page="home">
-        <span class="logo-mark">M</span>
-        <span class="logo-text">MAGNATINE <span class="logo-sub">LLC</span></span>
-      </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home"     class="nav-link active" data-page="home">Home</a></li>
-        <li><a href="#services" class="nav-link" data-page="services">Services</a></li>
-        <li><a href="#about"    class="nav-link" data-page="about">About</a></li>
-        <li><a href="#projects" class="nav-link" data-page="projects">Projects</a></li>
-        <li><a href="#contact"  class="nav-link nav-cta" data-page="contact">Contact Us</a></li>
-      </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+<!-- NAVBAR -->
+<nav>
+  <img src="logo.png" alt="Logo">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-  <!-- ========== PAGE: HOME ========== -->
-  <section id="home" class="page page-home active">
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>MAGNATINE LLC</h1>
+    <p>Powering Precision, Driving Innovation</p>
+  </div>
+</div>
 
-    <!-- Hero -->
-    <div class="hero">
-      <div class="hero-bg-grid"></div>
-      <div class="hero-orb hero-orb-1"></div>
-      <div class="hero-orb hero-orb-2"></div>
-      <div class="hero-content">
-        <div class="hero-badge reveal">
-          <span class="badge-dot"></span>
-          Manufacturing Engineering Consulting · Houston, TX
-        </div>
-        <h1 class="hero-headline reveal">
-          Advanced<br />
-          <span class="headline-accent">Manufacturing</span><br />
-          Engineering<br />
-          Solutions
-        </h1>
-        <p class="hero-sub reveal">
-          Over <strong>10 years of industry experience</strong> delivering precision engineering, 
-          automation, and process optimization for aerospace, automotive, and industrial clients worldwide.
-        </p>
-        <div class="hero-actions reveal">
-          <a href="#contact" class="btn btn-primary">Get a Quote</a>
-          <a href="#contact" class="btn btn-ghost">Contact Us</a>
-        </div>
-        <div class="hero-stats reveal">
-          <div class="stat">
-            <span class="stat-num">10<span class="stat-plus">+</span></span>
-            <span class="stat-label">Years Experience</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num">200<span class="stat-plus">+</span></span>
-            <span class="stat-label">Projects Delivered</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num">3</span>
-            <span class="stat-label">Industry Sectors</span>
-          </div>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hex-grid">
-          <div class="hex hex-1"><span>CAD</span></div>
-          <div class="hex hex-2"><span>PLC</span></div>
-          <div class="hex hex-3"><span>LEAN</span></div>
-          <div class="hex hex-4"><span>6σ</span></div>
-          <div class="hex hex-5"><span>CNC</span></div>
-          <div class="hex hex-6"><span>FEA</span></div>
-          <div class="hex hex-7"><span>CAM</span></div>
-        </div>
-      </div>
-      <div class="hero-scroll-hint">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
+<!-- ABOUT -->
+<section id="about">
+  <h2 class="section-title">About Us</h2>
+  <p>
+    MAGNATINE LLC is a manufacturing engineering consulting company with over 10 years of expertise 
+    in aerospace, automotive, and industrial engineering. We specialize in design optimization, 
+    automation, and lean manufacturing solutions.
+  </p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2 class="section-title">Featured Projects</h2>
+  
+  <div class="projects">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581092160607-ee22731a88f6">
+      <div class="card-content">
+        <h3>Aerospace Fixture Design</h3>
+        <p>High precision tooling for aircraft structures.</p>
       </div>
     </div>
 
-    <!-- Services Overview -->
-    <div class="section-wrap" id="services-preview">
-      <div class="section-label reveal">What We Do</div>
-      <h2 class="section-title reveal">Engineering Expertise<br /><span class="text-accent">Across Every Discipline</span></h2>
-      <div class="services-grid">
-        <div class="service-card reveal">
-          <div class="sc-icon"><svg viewBox="0 0 40 40"><path d="M8 32 L20 8 L32 32 Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="22" r="4" fill="currentColor" opacity=".4"/></svg></div>
-          <h3>Mechanical Design</h3>
-          <p>Precision CAD modeling in SolidWorks, CATIA, and NX. From concept to production-ready designs.</p>
-          <a href="#services" class="card-link">Learn more →</a>
-        </div>
-        <div class="service-card reveal">
-          <div class="sc-icon"><svg viewBox="0 0 40 40"><rect x="4" y="16" width="8" height="16" fill="currentColor" opacity=".4"/><rect x="16" y="8" width="8" height="24" fill="currentColor" opacity=".4"/><rect x="28" y="12" width="8" height="20" fill="currentColor" opacity=".4"/><line x1="4" y1="36" x2="36" y2="36" stroke="currentColor" stroke-width="2"/></svg></div>
-          <h3>Process Optimization</h3>
-          <p>Systematic analysis and redesign of manufacturing workflows to maximize throughput and minimize waste.</p>
-          <a href="#services" class="card-link">Learn more →</a>
-        </div>
-        <div class="service-card reveal">
-          <div class="sc-icon"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="10" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="4" fill="currentColor" opacity=".4"/><line x1="20" y1="4" x2="20" y2="10" stroke="currentColor" stroke-width="2"/><line x1="20" y1="30" x2="20" y2="36" stroke="currentColor" stroke-width="2"/><line x1="4" y1="20" x2="10" y2="20" stroke="currentColor" stroke-width="2"/><line x1="30" y1="20" x2="36" y2="20" stroke="currentColor" stroke-width="2"/></svg></div>
-          <h3>Automation & PLC</h3>
-          <p>End-to-end automation system design and PLC integration to drive precision and productivity.</p>
-          <a href="#services" class="card-link">Learn more →</a>
-        </div>
-        <div class="service-card reveal">
-          <div class="sc-icon"><svg viewBox="0 0 40 40"><polygon points="20,4 36,12 36,28 20,36 4,28 4,12" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="20,12 28,16 28,24 20,28 12,24 12,16" fill="currentColor" opacity=".4"/></svg></div>
-          <h3>Tooling & Fixtures</h3>
-          <p>Custom tooling and fixture design engineered for precision, repeatability, and long service life.</p>
-          <a href="#services" class="card-link">Learn more →</a>
-        </div>
-        <div class="service-card reveal">
-          <div class="sc-icon"><svg viewBox="0 0 40 40"><path d="M6 28 Q13 10 20 20 Q27 30 34 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="6" cy="28" r="3" fill="currentColor" opacity=".4"/><circle cx="34" cy="12" r="3" fill="currentColor" opacity=".4"/></svg></div>
-          <h3>Lean / Six Sigma</h3>
-          <p>Data-driven quality improvement methodologies to reduce defects and increase operational excellence.</p>
-          <a href="#services" class="card-link">Learn more →</a>
-        </div>
-        <div class="service-card reveal">
-          <div class="sc-icon"><svg viewBox="0 0 40 40"><rect x="8" y="8" width="10" height="10" rx="2" fill="currentColor" opacity=".4"/><rect x="22" y="8" width="10" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="8" y="22" width="10" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="22" y="22" width="10" height="10" rx="2" fill="currentColor" opacity=".4"/></svg></div>
-          <h3>Prototype Development</h3>
-          <p>Rapid prototyping and iterative development cycles bridging engineering theory and production reality.</p>
-          <a href="#services" class="card-link">Learn more →</a>
-        </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0">
+      <div class="card-content">
+        <h3>Automation Line</h3>
+        <p>Automated assembly system improving throughput.</p>
       </div>
     </div>
 
-    <!-- Key Highlights -->
-    <div class="highlights-wrap">
-      <div class="highlights-inner">
-        <div class="highlights-text">
-          <div class="section-label light reveal">Why MAGNATINE</div>
-          <h2 class="section-title light reveal">Built on Precision.<br />Driven by Results.</h2>
-          <p class="section-body light reveal">
-            MAGNATINE LLC combines deep technical expertise with a relentless focus on real-world outcomes. 
-            We don't just consult — we engineer solutions that last, performing under the most demanding 
-            conditions in aerospace, automotive, and industrial environments.
-          </p>
-          <a href="#about" class="btn btn-gold reveal">Our Story</a>
-        </div>
-        <div class="highlights-cards">
-          <div class="hl-card reveal">
-            <div class="hl-num">10<span>+</span></div>
-            <h4>Years of Industry Experience</h4>
-            <p>Deep knowledge across aerospace, automotive, and heavy industrial sectors.</p>
-          </div>
-          <div class="hl-card reveal">
-            <div class="hl-num">40<span>%</span></div>
-            <h4>Average Cost Reduction</h4>
-            <p>Proven strategies delivering measurable savings through lean and process redesign.</p>
-          </div>
-          <div class="hl-card reveal">
-            <div class="hl-num">99<span>%</span></div>
-            <h4>On-Time Delivery</h4>
-            <p>Disciplined project management ensuring commitments are met every time.</p>
-          </div>
-          <div class="hl-card reveal">
-            <div class="hl-num">3x</div>
-            <h4>Efficiency Improvement</h4>
-            <p>Clients report up to 3× throughput gains following process optimization engagements.</p>
-          </div>
-        </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581092919535-7146ff1c2f3d">
+      <div class="card-content">
+        <h3>Lean Manufacturing</h3>
+        <p>Process optimization reducing waste and cost.</p>
       </div>
     </div>
 
-    <!-- Industries -->
-    <div class="section-wrap">
-      <div class="section-label reveal">Sectors We Serve</div>
-      <h2 class="section-title reveal">Industry Expertise</h2>
-      <div class="industries-grid">
-        <div class="industry-card reveal">
-          <div class="ind-icon">✈</div>
-          <h3>Aerospace</h3>
-          <p>AS9100-aware engineering solutions for flight-critical components and assemblies with zero-defect standards.</p>
-        </div>
-        <div class="industry-card reveal">
-          <div class="ind-icon">⚙</div>
-          <h3>Automotive</h3>
-          <p>IATF 16949-aligned process design and tooling supporting high-volume, precision manufacturing operations.</p>
-        </div>
-        <div class="industry-card reveal">
-          <div class="ind-icon">🏭</div>
-          <h3>Industrial</h3>
-          <p>Heavy industry process consulting covering custom machinery, automation integration, and facility optimization.</p>
-        </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581093458791-9d6a49a62b3b">
+      <div class="card-content">
+        <h3>Engine Bracket Design</h3>
+        <p>Cost reduction through structural redesign.</p>
       </div>
     </div>
 
-    <!-- CTA Banner -->
-    <div class="cta-banner">
-      <div class="cta-inner reveal">
-        <h2>Ready to Optimize Your Manufacturing Operations?</h2>
-        <p>Speak with an engineer today. No obligation — just expertise.</p>
-        <div class="cta-actions">
-          <a href="#contact" class="btn btn-primary">Get a Free Consultation</a>
-          <a href="#projects" class="btn btn-ghost-light">View Our Work</a>
-        </div>
-      </div>
-    </div>
+  </div>
+</section>
 
-  </section>
+<!-- SERVICES -->
+<section id="services">
+  <h2 class="section-title">Services</h2>
 
-  <!-- ========== PAGE: SERVICES ========== -->
-  <section id="services" class="page page-services">
-    <div class="page-hero-sm">
-      <div class="hero-bg-grid"></div>
-      <div class="ph-content">
-        <div class="section-label light reveal">What We Offer</div>
-        <h1 class="page-hero-title reveal">Engineering Services</h1>
-        <p class="page-hero-sub reveal">Comprehensive manufacturing engineering solutions tailored to your most complex challenges.</p>
-      </div>
-    </div>
+  <div class="services">
+    <div class="service-box">Mechanical Design & CAD</div>
+    <div class="service-box">Manufacturing Process Optimization</div>
+    <div class="service-box">Automation & Robotics</div>
+    <div class="service-box">Six Sigma & Quality Engineering</div>
+  </div>
 
-    <div class="section-wrap">
-      <!-- Service 1 -->
-      <div class="service-detail reveal">
-        <div class="sd-num">01</div>
-        <div class="sd-content">
-          <div class="sd-header">
-            <h2>Mechanical Design</h2>
-            <div class="sd-tools">
-              <span class="tool-tag">SolidWorks</span>
-              <span class="tool-tag">CATIA</span>
-              <span class="tool-tag">NX</span>
-              <span class="tool-tag">AutoCAD</span>
-            </div>
-          </div>
-          <p>Our mechanical design services span the complete product lifecycle — from initial concept sketches to full production-ready 3D models and engineering drawings. We work in all major CAD platforms including SolidWorks, CATIA V5/V6, and Siemens NX, and deliver designs optimized for manufacturability, assembly, and cost.</p>
-          <ul class="sd-list">
-            <li>3D parametric modeling and surface design</li>
-            <li>Engineering drawings with full GD&T callouts</li>
-            <li>Design for Manufacturability (DFM) and Assembly (DFA)</li>
-            <li>Finite Element Analysis (FEA) and stress studies</li>
-            <li>PDM/PLM system integration and BOM management</li>
-          </ul>
-        </div>
-      </div>
+</section>
 
-      <div class="divider"></div>
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="section-title">Contact</h2>
+  <p>
+    MAGNATINE LLC<br>
+    17350 State Hwy 249, Ste 220<br>
+    Houston, TX 77064<br><br>
+    Email: info@magnatine.com
+  </p>
+</section>
 
-      <!-- Service 2 -->
-      <div class="service-detail reveal">
-        <div class="sd-num">02</div>
-        <div class="sd-content">
-          <div class="sd-header">
-            <h2>Manufacturing Process Optimization</h2>
-            <div class="sd-tools">
-              <span class="tool-tag">Value Stream Mapping</span>
-              <span class="tool-tag">FMEA</span>
-              <span class="tool-tag">PFMEA</span>
-            </div>
-          </div>
-          <p>We conduct thorough analysis of your existing production workflows to identify inefficiencies, bottlenecks, and waste — then engineer systematic solutions that deliver measurable, lasting improvements to throughput, quality, and cost.</p>
-          <ul class="sd-list">
-            <li>Value stream mapping and waste identification</li>
-            <li>Cycle time reduction and capacity planning</li>
-            <li>Process flow redesign and workstation optimization</li>
-            <li>PFMEA development and risk mitigation</li>
-            <li>Control plan development and SPC implementation</li>
-          </ul>
-        </div>
-      </div>
+<!-- FOOTER -->
+<footer>
+  <img src="logo.png">
+  <p>© 2026 MAGNATINE LLC</p>
+</footer>
 
-      <div class="divider"></div>
+<!-- JS -->
+<script>
+document.querySelectorAll("a").forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    if(this.getAttribute("href").startsWith("#")){
+      e.preventDefault();
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  });
+});
+</script>
 
-      <!-- Service 3 -->
-      <div class="service-detail reveal">
-        <div class="sd-num">03</div>
-        <div class="sd-content">
-          <div class="sd-header">
-            <h2>Automation & PLC Integration</h2>
-            <div class="sd-tools">
-              <span class="tool-tag">Allen-Bradley</span>
-              <span class="tool-tag">Siemens</span>
-              <span class="tool-tag">HMI Design</span>
-              <span class="tool-tag">SCADA</span>
-            </div>
-          </div>
-          <p>We design, integrate, and commission automated manufacturing systems from end to end. Whether retrofitting existing lines or deploying new automation cells, our engineers deliver solutions that increase precision, reduce labor dependency, and scale with your operation.</p>
-          <ul class="sd-list">
-            <li>PLC programming (Allen-Bradley, Siemens, Mitsubishi)</li>
-            <li>HMI / SCADA system development</li>
-            <li>Robotic cell design and integration</li>
-            <li>Pneumatic, hydraulic, and servo system design</li>
-            <li>Electrical panel design and controls engineering</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="divider"></div>
-
-      <!-- Service 4 -->
-      <div class="service-detail reveal">
-        <div class="sd-num">04</div>
-        <div class="sd-content">
-          <div class="sd-header">
-            <h2>Tooling & Fixture Design</h2>
-            <div class="sd-tools">
-              <span class="tool-tag">CMM Fixtures</span>
-              <span class="tool-tag">Weld Fixtures</span>
-              <span class="tool-tag">Machining Jigs</span>
-            </div>
-          </div>
-          <p>Custom tooling and fixture solutions engineered for your specific parts, tolerances, and production volumes. We design for repeatability, longevity, and ease of use — reducing setup time and improving first-pass yield across your operations.</p>
-          <ul class="sd-list">
-            <li>Weld and assembly fixtures with locating systems</li>
-            <li>Machining jigs and modular fixturing</li>
-            <li>CMM measurement fixtures and check gauges</li>
-            <li>Press tooling, forming dies, and stamps</li>
-            <li>Tool life analysis and material selection</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="divider"></div>
-
-      <!-- Service 5 -->
-      <div class="service-detail reveal">
-        <div class="sd-num">05</div>
-        <div class="sd-content">
-          <div class="sd-header">
-            <h2>Lean Manufacturing / Six Sigma</h2>
-            <div class="sd-tools">
-              <span class="tool-tag">DMAIC</span>
-              <span class="tool-tag">5S</span>
-              <span class="tool-tag">Kaizen</span>
-              <span class="tool-tag">Kanban</span>
-            </div>
-          </div>
-          <p>We embed Lean and Six Sigma methodologies directly into your manufacturing culture — not just as a project, but as a lasting operational framework. Our Black Belt-level consultants guide teams through structured improvement cycles that produce real, quantified results.</p>
-          <ul class="sd-list">
-            <li>DMAIC project leadership and facilitation</li>
-            <li>5S implementation and visual factory design</li>
-            <li>Kaizen event planning and execution</li>
-            <li>Statistical Process Control (SPC) and MSA</li>
-            <li>Operator training and continuous improvement culture building</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="divider"></div>
-
-      <!-- Service 6 -->
-      <div class="service-detail reveal">
-        <div class="sd-num">06</div>
-        <div class="sd-content">
-          <div class="sd-header">
-            <h2>Prototype Development</h2>
-            <div class="sd-tools">
-              <span class="tool-tag">Rapid Prototyping</span>
-              <span class="tool-tag">3D Printing</span>
-              <span class="tool-tag">CNC Machining</span>
-            </div>
-          </div>
-          <p>We accelerate the path from engineering design to physical validation. Our prototype development services compress development timelines and identify design risks before tooling investment — saving time, cost, and production headaches downstream.</p>
-          <ul class="sd-list">
-            <li>Functional prototype design and fabrication coordination</li>
-            <li>FDM, SLA, SLS rapid prototyping management</li>
-            <li>CNC machined prototypes and short-run production</li>
-            <li>Design validation testing and iteration</li>
-            <li>Production readiness assessment and launch support</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Services CTA -->
-    <div class="cta-banner">
-      <div class="cta-inner reveal">
-        <h2>Don't See Exactly What You Need?</h2>
-        <p>We tailor every engagement to your specific engineering challenge. Let's talk.</p>
-        <a href="#contact" class="btn btn-primary">Start a Conversation</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== PAGE: ABOUT ========== -->
-  <section id="about" class="page page-about">
-    <div class="page-hero-sm">
-      <div class="hero-bg-grid"></div>
-      <div class="ph-content">
-        <div class="section-label light reveal">Our Story</div>
-        <h1 class="page-hero-title reveal">About MAGNATINE LLC</h1>
-        <p class="page-hero-sub reveal">A decade of delivering engineering excellence across the industries that build the world.</p>
-      </div>
-    </div>
-
-    <!-- Mission -->
-    <div class="section-wrap">
-      <div class="about-mission reveal">
-        <div class="am-accent-line"></div>
-        <blockquote class="am-quote">
-          "We exist to solve the manufacturing challenges others walk away from — through deep technical knowledge, relentless innovation, and an unwavering commitment to measurable results."
-        </blockquote>
-        <cite>— MAGNATINE LLC Founding Principle</cite>
-      </div>
-
-      <div class="about-cols">
-        <div class="about-col reveal">
-          <h2>Who We Are</h2>
-          <p>MAGNATINE LLC is a Houston-based manufacturing engineering consulting firm with over 10 years of proven experience serving clients across the aerospace, automotive, and industrial manufacturing sectors.</p>
-          <p>Founded by engineers with hands-on production floor experience, we understand that real-world manufacturing problems demand more than theoretical solutions. Our team brings deep technical knowledge, practical problem-solving skills, and a results-driven mindset to every engagement.</p>
-          <p>From Fortune 500 OEMs to specialized Tier 1 suppliers, MAGNATINE has earned the trust of clients who demand precision, reliability, and measurable outcomes.</p>
-        </div>
-        <div class="about-col reveal">
-          <h2>Our Approach</h2>
-          <p>Every engagement begins with a thorough assessment of your current state — your processes, constraints, goals, and opportunities. We don't believe in one-size-fits-all consulting playbooks. Instead, we build customized engineering strategies grounded in data and guided by decades of experience.</p>
-          <p>We embed with your team, work alongside your engineers, and transfer knowledge so that improvements are self-sustaining long after our engagement ends. Our goal isn't dependency — it's transformation.</p>
-          <p>From a single tooling challenge to a full facility optimization, MAGNATINE brings the same level of rigor and dedication to every project.</p>
-        </div>
-      </div>
-
-      <!-- Core Values -->
-      <div class="section-label reveal" style="margin-top:4rem;">Core Values</div>
-      <div class="values-grid">
-        <div class="value-card reveal">
-          <div class="vc-num">I</div>
-          <h3>Precision</h3>
-          <p>Engineering decisions backed by data, analysis, and rigorous validation — not assumptions.</p>
-        </div>
-        <div class="value-card reveal">
-          <div class="vc-num">II</div>
-          <h3>Innovation</h3>
-          <p>Challenging conventional approaches to uncover breakthrough solutions for complex problems.</p>
-        </div>
-        <div class="value-card reveal">
-          <div class="vc-num">III</div>
-          <h3>Integrity</h3>
-          <p>Transparent communication, honest assessments, and commitments we always keep.</p>
-        </div>
-        <div class="value-card reveal">
-          <div class="vc-num">IV</div>
-          <h3>Results</h3>
-          <p>Measured by your success — not just hours billed or reports delivered.</p>
-        </div>
-      </div>
-
-      <!-- Expertise breakdown -->
-      <div class="expertise-wrap reveal">
-        <h2 class="section-title" style="margin-bottom:2.5rem;">Technical Expertise</h2>
-        <div class="expertise-bars">
-          <div class="exp-bar-item">
-            <div class="exp-bar-label"><span>Mechanical Design & CAD</span><span class="exp-pct">95%</span></div>
-            <div class="exp-bar-track"><div class="exp-bar-fill" data-width="95"></div></div>
-          </div>
-          <div class="exp-bar-item">
-            <div class="exp-bar-label"><span>Manufacturing Process Engineering</span><span class="exp-pct">92%</span></div>
-            <div class="exp-bar-track"><div class="exp-bar-fill" data-width="92"></div></div>
-          </div>
-          <div class="exp-bar-item">
-            <div class="exp-bar-label"><span>Automation & PLC Systems</span><span class="exp-pct">88%</span></div>
-            <div class="exp-bar-track"><div class="exp-bar-fill" data-width="88"></div></div>
-          </div>
-          <div class="exp-bar-item">
-            <div class="exp-bar-label"><span>Lean / Six Sigma</span><span class="exp-pct">90%</span></div>
-            <div class="exp-bar-track"><div class="exp-bar-fill" data-width="90"></div></div>
-          </div>
-          <div class="exp-bar-item">
-            <div class="exp-bar-label"><span>Tooling & Fixture Design</span><span class="exp-pct">93%</span></div>
-            <div class="exp-bar-track"><div class="exp-bar-fill" data-width="93"></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== PAGE: PROJECTS ========== -->
-  <section id="projects" class="page page-projects">
-    <div class="page-hero-sm">
-      <div class="hero-bg-grid"></div>
-      <div class="ph-content">
-        <div class="section-label light reveal">Portfolio</div>
-        <h1 class="page-hero-title reveal">Featured Projects</h1>
-        <p class="page-hero-sub reveal">Real-world engineering solutions delivering quantifiable results for our clients.</p>
-      </div>
-    </div>
-
-    <div class="section-wrap">
-
-      <div class="project-card reveal">
-        <div class="proj-img proj-img-1">
-          <div class="proj-img-overlay">
-            <span class="proj-sector">Aerospace</span>
-          </div>
-        </div>
-        <div class="proj-content">
-          <h3>Structural Assembly Fixture Redesign</h3>
-          <p class="proj-client">Tier 1 Aerospace Supplier · Houston, TX</p>
-          <p>Redesigned an aging weld fixture system for a critical fuselage sub-assembly. The new modular tooling system reduced setup time by 65% and improved dimensional repeatability to within ±0.005".</p>
-          <div class="proj-outcomes">
-            <div class="outcome"><span class="out-num">65%</span><span class="out-label">Setup Time Reduction</span></div>
-            <div class="outcome"><span class="out-num">±0.005"</span><span class="out-label">Tolerance Achieved</span></div>
-            <div class="outcome"><span class="out-num">$280K</span><span class="out-label">Annual Cost Savings</span></div>
-          </div>
-          <div class="proj-tags">
-            <span>Fixture Design</span><span>SolidWorks</span><span>GD&T</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card reveal">
-        <div class="proj-img proj-img-2">
-          <div class="proj-img-overlay">
-            <span class="proj-sector">Automotive</span>
-          </div>
-        </div>
-        <div class="proj-content">
-          <h3>Stamping Line Automation Integration</h3>
-          <p class="proj-client">Automotive Body Parts Manufacturer · San Antonio, TX</p>
-          <p>Designed and integrated a fully automated press transfer system for a high-volume stamping operation. Eliminated manual part transfer, reduced cycle time by 42%, and improved operator safety metrics to zero incidents.</p>
-          <div class="proj-outcomes">
-            <div class="outcome"><span class="out-num">42%</span><span class="out-label">Cycle Time Reduction</span></div>
-            <div class="outcome"><span class="out-num">0</span><span class="out-label">Safety Incidents Post-Launch</span></div>
-            <div class="outcome"><span class="out-num">$1.2M</span><span class="out-label">5-Year Labor Savings</span></div>
-          </div>
-          <div class="proj-tags">
-            <span>Automation</span><span>PLC</span><span>Allen-Bradley</span><span>Robotics</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card reveal">
-        <div class="proj-img proj-img-3">
-          <div class="proj-img-overlay">
-            <span class="proj-sector">Industrial</span>
-          </div>
-        </div>
-        <div class="proj-content">
-          <h3>Lean Transformation – Heat Exchanger Plant</h3>
-          <p class="proj-client">Industrial HVAC Manufacturer · Dallas, TX</p>
-          <p>Led a 6-month Lean transformation initiative across a 180,000 sq ft manufacturing facility. Implemented 5S, visual management, Kanban replenishment, and standard work, resulting in a 38% throughput increase with no capital investment.</p>
-          <div class="proj-outcomes">
-            <div class="outcome"><span class="out-num">38%</span><span class="out-label">Throughput Increase</span></div>
-            <div class="outcome"><span class="out-num">52%</span><span class="out-label">WIP Inventory Reduction</span></div>
-            <div class="outcome"><span class="out-num">$0</span><span class="out-label">Capital Investment Required</span></div>
-          </div>
-          <div class="proj-tags">
-            <span>Lean</span><span>5S</span><span>Kaizen</span><span>VSM</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card reveal">
-        <div class="proj-img proj-img-4">
-          <div class="proj-img-overlay">
-            <span class="proj-sector">Aerospace</span>
-          </div>
-        </div>
-        <div class="proj-content">
-          <h3>Engine Bracket Lightweight Redesign</h3>
-          <p class="proj-client">Aerospace OEM Supplier · Houston, TX</p>
-          <p>Tasked with reducing part weight of a turbine engine mounting bracket by 25% without compromising structural integrity. Applied topology optimization and advanced FEA to achieve a 31% weight reduction while exceeding original safety factors.</p>
-          <div class="proj-outcomes">
-            <div class="outcome"><span class="out-num">31%</span><span class="out-label">Weight Reduction</span></div>
-            <div class="outcome"><span class="out-num">1.6x</span><span class="out-label">Improved Safety Factor</span></div>
-            <div class="outcome"><span class="out-num">$45K</span><span class="out-label">Per-Unit Fuel Savings/yr</span></div>
-          </div>
-          <div class="proj-tags">
-            <span>CATIA</span><span>FEA</span><span>Topology Optimization</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card reveal">
-        <div class="proj-img proj-img-5">
-          <div class="proj-img-overlay">
-            <span class="proj-sector">Automotive</span>
-          </div>
-        </div>
-        <div class="proj-content">
-          <h3>Six Sigma Defect Reduction Program</h3>
-          <p class="proj-client">Tier 2 Transmission Components Supplier · Austin, TX</p>
-          <p>Implemented a DMAIC-structured Six Sigma project targeting a persistent dimensional defect on a high-volume transmission gear. Root cause analysis revealed a thermal variation issue in the grinding process, corrected through DOE-validated process controls.</p>
-          <div class="proj-outcomes">
-            <div class="outcome"><span class="out-num">94%</span><span class="out-label">Defect Rate Reduction</span></div>
-            <div class="outcome"><span class="out-num">1.67</span><span class="out-label">Cpk Achieved</span></div>
-            <div class="outcome"><span class="out-num">$620K</span><span class="out-label">Annual Scrap Savings</span></div>
-          </div>
-          <div class="proj-tags">
-            <span>Six Sigma</span><span>DMAIC</span><span>DOE</span><span>SPC</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="cta-banner">
-      <div class="cta-inner reveal">
-        <h2>Ready to Be Our Next Success Story?</h2>
-        <p>Tell us about your challenge and let our engineers develop a solution.</p>
-        <a href="#contact" class="btn btn-primary">Contact Our Team</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== PAGE: CONTACT ========== -->
-  <section id="contact" class="page page-contact">
-    <div class="page-hero-sm">
-      <div class="hero-bg-grid"></div>
-      <div class="ph-content">
-        <div class="section-label light reveal">Get in Touch</div>
-        <h1 class="page-hero-title reveal">Contact MAGNATINE</h1>
-        <p class="page-hero-sub reveal">Ready to optimize your manufacturing operations? Our engineers are standing by.</p>
-      </div>
-    </div>
-
-    <div class="contact-wrap section-wrap">
-      <div class="contact-info reveal">
-        <h2>Let's Start a Conversation</h2>
-        <p class="contact-intro">Whether you need a quick consultation or a full-scale engineering engagement, we're ready to help you solve your toughest manufacturing challenges.</p>
-
-        <div class="contact-details">
-          <div class="cd-item">
-            <div class="cd-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-            </div>
-            <div class="cd-text">
-              <strong>Office Address</strong>
-              <span>17350 State Hwy 249, Ste 220<br />Houston, TX 77064</span>
-            </div>
-          </div>
-          <div class="cd-item">
-            <div class="cd-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div class="cd-text">
-              <strong>Email</strong>
-              <span>HR@Magnatine.com</span>
-            </div>
-          </div>
-          <div class="cd-item">
-            <div class="cd-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="17" r="1" fill="currentColor"/></svg>
-            </div>
-            <div class="cd-text">
-              <strong>Response Time</strong>
-              <span>We respond within 1 business day</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Map -->
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3459.4!2d-95.5524!3d29.9136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d07b8fcef4d1%3A0x1!2s17350+State+Hwy+249+Ste+220%2C+Houston%2C+TX+77064!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="MAGNATINE LLC Office Location"
-          ></iframe>
-        </div>
-      </div>
-
-      <div class="contact-form-wrap reveal">
-        <div class="contact-form-inner">
-          <h3>Send Us a Message</h3>
-          <p>Fill in the form below and a member of our team will be in touch shortly.</p>
-          <form class="contact-form" id="contactForm" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fname">First Name <span>*</span></label>
-                <input type="text" id="fname" name="fname" placeholder="John" required />
-              </div>
-              <div class="form-group">
-                <label for="lname">Last Name <span>*</span></label>
-                <input type="text" id="lname" name="lname" placeholder="Smith" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address <span>*</span></label>
-              <input type="email" id="email" name="email" placeholder="john@company.com" required />
-            </div>
-            <div class="form-group">
-              <label for="company">Company / Organization</label>
-              <input type="text" id="company" name="company" placeholder="ACME Manufacturing Inc." />
-            </div>
-            <div class="form-group">
-              <label for="service">Service of Interest</label>
-              <select id="service" name="service">
-                <option value="">— Select a service —</option>
-                <option>Mechanical Design</option>
-                <option>Manufacturing Process Optimization</option>
-                <option>Automation & PLC Integration</option>
-                <option>Tooling & Fixture Design</option>
-                <option>Lean Manufacturing / Six Sigma</option>
-                <option>Prototype Development</option>
-                <option>General Inquiry</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Message <span>*</span></label>
-              <textarea id="message" name="message" rows="5" placeholder="Describe your project, challenge, or question..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">
-              <span class="btn-text">Send Message</span>
-              <span class="btn-icon">→</span>
-            </button>
-            <div class="form-success" id="formSuccess">
-              ✓ Thank you! Your message has been sent. We'll be in touch within 1 business day.
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a href="#home" class="nav-logo">
-          <span class="logo-mark">M</span>
-          <span class="logo-text">MAGNATINE <span class="logo-sub">LLC</span></span>
-        </a>
-        <p>Advanced Manufacturing Engineering Consulting for aerospace, automotive, and industrial clients across North America.</p>
-        <div class="footer-address">
-          17350 State Hwy 249, Ste 220<br />Houston, TX 77064
-        </div>
-      </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#services">Mechanical Design</a></li>
-            <li><a href="#services">Process Optimization</a></li>
-            <li><a href="#services">Automation & PLC</a></li>
-            <li><a href="#services">Tooling & Fixtures</a></li>
-            <li><a href="#services">Lean / Six Sigma</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Industries</h4>
-          <ul>
-            <li><a href="#about">Aerospace</a></li>
-            <li><a href="#about">Automotive</a></li>
-            <li><a href="#about">Industrial</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2024 MAGNATINE LLC. All rights reserved. · Houston, Texas</p>
-      <p class="footer-disclaimer">Manufacturing Engineering Consulting</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
